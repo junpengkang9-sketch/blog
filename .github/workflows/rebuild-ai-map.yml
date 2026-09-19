@@ -1,0 +1,30 @@
+name: Rebuild AI capability map
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.tmp-ai-map/**'
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild HTML
+        run: |
+          cat .tmp-ai-map/chunk*.txt | base64 --decode > ai-app-capability-map/index.html
+      - name: Commit rebuilt page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ai-app-capability-map/index.html
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Publish updated AI capability map"
+            git push
+          fi
