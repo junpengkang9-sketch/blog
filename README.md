@@ -15,12 +15,20 @@
 - [Monorepo 与包管理](docs/frontend/04-Monorepo与包管理.md)
 - [前端质量体系](docs/frontend/05-前端质量体系.md)
 
-## Python
+## Backend
+
+### Python
 
 - [Python 工程基础](docs/python/01-Python工程基础.md)
 - [异步、并发与性能](docs/python/02-异步并发与性能.md)
 - [Web 后端与 API](docs/python/03-Web后端与API.md)
 - [测试与代码质量](docs/python/04-测试与代码质量.md)
+
+> Java 与后端通用能力（API Design / Auth / Cache / Queue）后续补充。
+
+## Database
+
+- [数据库学习大纲](docs/database/00-数据库学习大纲.md)
 
 ## AI
 
@@ -35,13 +43,19 @@
 ### Frontend
 前端工程化 → 构建工具 → Monorepo → 质量体系 → 微前端
 
-### Python / AI Application
-Python 工程基础 → 异步并发 → FastAPI / Pydantic / SQLAlchemy → LLM 基础 → RAG → Agent → MCP → Evaluation / Observability
+### Backend / Python
+Python 工程基础 → 异步并发 → FastAPI / Pydantic / SQLAlchemy
+
+### Database
+数据库基础 → 关系型 / NoSQL → SQL → 索引 → 事务 → PostgreSQL / MySQL / Oracle → Redis → Vector Database
+
+### AI Application
+LLM 基础 → RAG → Agent → MCP → Evaluation / Observability
 
 ## 后续可继续扩展
 
-- Database：PostgreSQL / Redis / Vector DB
-- Backend：API Design / Auth / Queue / Cache
+- Backend：Java / API Design / Auth / Queue / Cache
+- Database：继续拆分关系型、NoSQL 与性能专题
 - DevOps：Docker / CI/CD / Kubernetes
 - AI Infra：Inference / Serving / Model Gateway
 - System Design：架构设计、稳定性、性能与安全
