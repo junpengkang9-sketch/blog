@@ -29,6 +29,7 @@
 ## Database
 
 - [数据库学习大纲](docs/database/00-数据库学习大纲.md)
+- [数据库基础](docs/database/01-数据库基础.md)
 
 ## AI
 
